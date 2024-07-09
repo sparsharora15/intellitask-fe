@@ -1,0 +1,35 @@
+.react-trello-lane {
+  background-color: #f7f8f9 !important;
+  margin: 0px !important;
+}
+.horizontal {
+  display: flex;
+  gap: 1rem;
+}
+.ql-toolbar {
+  border-top-left-radius: calc(var(--radius) - 2px);
+  border-top-right-radius: calc(var(--radius) - 2px);
+  border-color: hsl(var(--input));
+  border-width: 1px;
+}
+.ql-container {
+  border-width: 1px;
+  border-color: hsl(var(--input));
+  border-bottom-left-radius: calc(var(--radius) - 2px);
+  border-bottom-right-radius: calc(var(--radius) - 2px);
+}
+.test:focus-visible {
+  --tw-ring-color: hsl(var(--ring));
+}
+
+.ql-editor > * {
+  line-break: anywhere;
+}
+.knBHSk {
+  font-size: 12px;
+  color: #4d4d4d;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  line-clamp: 4;
+  text-overflow: ellipsis !important;
+ }
