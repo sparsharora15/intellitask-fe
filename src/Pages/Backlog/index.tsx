@@ -120,7 +120,6 @@ const Backlog = () => {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem>View</DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => {
                   setSelectedTaskId(row.original._id as string);
