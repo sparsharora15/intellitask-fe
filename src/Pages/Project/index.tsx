@@ -330,9 +330,12 @@ const Project = () => {
     }
   }, [token]);
   useEffect(() => {
-    getToken().then((token) => {
-      setToken(token as string);
-    });
+    const intervalId = setInterval(() => {
+      getToken().then((token) => {
+        setToken(token as string);
+      });
+    }, 2000);
+    return () => clearInterval(intervalId);
   }, []);
 
   useEffect(() => {

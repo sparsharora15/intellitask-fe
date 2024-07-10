@@ -19,7 +19,7 @@ const Board = () => {
   const [taskData, setTaskData] = useState<Tasks[]>([]);
   const [, setStatus] = useState<string>("");
   const [, setCard] = useState<Tasks | null>(null);
-  const {  getToken } = useAuth();
+  const { getToken } = useAuth();
 
   const [selectedProject, setSelectedProject] = useState<Options>(
     projectData[0]
@@ -124,9 +124,12 @@ const Board = () => {
     }
   }, [selectedProject]);
   useEffect(() => {
-    getToken().then((token) => {
-      setToken(token as string);
-    });
+    const intervalId = setInterval(() => {
+      getToken().then((token) => {
+        setToken(token as string);
+      });
+    }, 2000);
+    return () => clearInterval(intervalId);
   }, []);
   useEffect(() => {
     if (socket) {
